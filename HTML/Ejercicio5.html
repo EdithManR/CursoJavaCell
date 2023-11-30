@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio5</title>
+</head>
+<body>
+<header>
+  <img src="logo.png" alt="logo">
+  <nav style="margin: 20px 0px;">
+    <a href="#link1">Link1</a>
+    <a href="#link2">Link2</a>
+  </nav>
+</header>
+<section>
+  <form  action="mipaginaweb.com" method="POST">
+    <h1>Formulario</h1>
+    <label for="nombre"> Nombre</label>
+    <input type="text" name="nombre" id="nombre" placeholder="Ma. José Ramirez"><br>
+    <label for="telefono"> Teléfono</label>
+    <input type="tel" name="telefono" id="telefono" placeholder="55 87653497"><br>
+    <label for="email"> Email</label>
+    <input type="email" name="email" id="email" placeholder="email@gmail.com"><br>
+    <label for="fecha"> Seleccione la Fecha de entrega</label>
+    <input type="date" name="fecha" id="fecha"><br>
+    <label for="auto"> Tengo vehículo</label>
+    <input type="checkbox" id="auto" name="auto" value="true"><br>
+    <label for="color"> Color</label>
+    <input type="color" name="color" id="color"><br>
+    <label for="url"> Ingrese la url de su sitio web</label>
+    <input type="url" name="url" id="url" placeholder="https://..."> <br><br>
+    <label for="cars">¿Qué tipo de auto te interesa?</label><br>
+    <select name="cars" id="cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select><br>
+
+    <label for="price">Precio aproximado</label>
+    <input type="range" id="price" name="precio" min="500000" max="3000000">
+    <p>Por favor seleccione su rango de edad</p>
+    <input type="radio" id="edad1" name="edad" value="30">
+    <label for="edad1">18 - 30</label><br>
+    <input type="radio" id="edad2" name="edad" value="60">
+    <label for="edad2">31 - 60</label><br>  
+    <input type="radio" id="edad3" name="edad" value="100">
+    <label for="edad3">61 - 100</label><br><br>
+    <input type="reset" value="Limpiar">
+    <input type="submit" value="Enviar">
+  </form>
+</section>
+<footer stye="background:black; color white;margin-top:100px;">
+  Aviso de privacidad
+</footer>
+</body>
+</html>

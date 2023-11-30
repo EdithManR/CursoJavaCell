@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio7-Enlaces</title>
+</head>
+<body>
+  <header id="inicio">
+    <h1>Enlaces</h1>
+    <ul>
+      <li><a href="mailto:someone@example.com">Enviar email</a></li>
+      <li><a href="tel:+4733378901">Llamada telefónica</a></li>
+      <!-- [protocol]:[username]?[action] chat/call/sendfile/add/userinfo-->
+      <li><a href="skype:example123?chat">Skype</a></li>
+      <!-- [protocol]: [action]? [text=]&[phone=+]-->
+      <li><a href="whatsapp://send?text=Tu mensaje&phone=+123456789***">WhatsApp 1</a></li>
+      <li><a href="https://aPi.whatsapp.com/send?phone=15551234567">WhatsApp 2</a></li>
+      <li><a href="#footer">Seccion del documento (anclas)</a></li>
+      <li><a href="javascript:alert('Helo World!')">JavaScript</a></li>
+      
+    </ul>
+    <p>Semántica</p>
+    <ul>
+      <li><a href="https://www.google.com" target="_blank">Google (blank)</a></li>
+      <li><a href="https://www.google.com" target="_parent"> Google (top)</a></li>
+      <!-- rel: especifica la relación entre el documento actual y el documanto ligado-->
+      <li>
+        <a href="http://intranet.ids.com.mx" rel="author"> Intranet IDS</a>
+      </li>
+    </ul>
+  </header>
+  <section id="section1">
+    <article>
+      <hr>
+      <br><br><br><br>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nostrum vero dolor nisi  pe
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolorum quodporro quodporro
+      <br><br><br><br><br><br>
+    </article>
+  </section>
+  <footer id ="footer">
+    <a href="#inicio" rel="">Inicio</a>
+    <p>Posted by: me</p>
+    <p>Contact information: <a href="mailto. someone@example.com">someone@example.com</a></p>
+  </footer>
+</body>
+</html>

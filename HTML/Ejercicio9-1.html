@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio9-formulario</title>
+  <style>
+    h1{
+      margin-left: 70px;
+    }
+    .contorno{
+      border:solid 2px #c6c6c6;
+      margin:70px 70px;
+      padding: 20px;;
+    }
+    .form_title{
+      margin-top: -32px;
+      display: block;
+      background-color: hsl(0, 0%, 100%);
+      max-width: 300px;
+      padding:10px;
+      border-bottom:1px solid grey;
+      border-right:1px solid grey;
+      margin-bottom: 29px;
+    }
+    footer{
+      margin-top:40px;
+      background:rgb(39, 38, 38);
+      color:white;
+      padding:30px;
+    }
+  </style>
+</head>
+<body>
+  <section id="formulario">
+    <h1>Información del producto</h1>
+    <form action="">
+      <section class="contorno">
+        <span class="form_title">Datos básicos</span>
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" name="nombre" id="nombre">
+        <br>
+        <br>
+        <label for="edad">Descripción:</label><br>
+        <textarea id="description" name="description" rows="4" cols="50">Describa aquí su producto</textarea><br><br>
+        <label for="foto">Fotografía</label>
+        <input type="file" id="foto" name="foto">
+        <br><br>
+        <input type="checkbox" name="contador" id="contador"> <label for="foto">Añadir contador de visitas</label>
+      </section>
+      <section class="contorno">
+        <span class="form_title">Datos económicos</span>
+        <label for="precio">Precio: </label>
+        <input type="text" name="precio" id="precio" inputmode="number"><span>€</span>
+        <label for="impuestos">Impuestos</label>
+        <input type="number" naMe="impuestos" id="impuestos" placeholder="4%" min=1 max=100>
+        <br><br> 
+        <span>Promoción</span><br>
+        <input type="radio" id="ninguno" name="ninguno" value="ninguno">
+        <label for="ninguno"> Ninguno</label><br>
+        <input type="radio" id="transporte" name="transporte" value="transporte">
+        <label for="transporte"> Transporte gratuito</label><br>
+        <input type="radio" id="descuento" name="descuento" value="descuento">
+        <label for="descuento"> Descuento 5%</label><br> <br>
+        <input type="reset" value="Limpiar">
+        <input type="submit" value="Enviar">
+      </section>
+    </form>
+  </section>
+  
+  <footer>
+    contacto
+  </footer>
+  
+</body>
+</html>

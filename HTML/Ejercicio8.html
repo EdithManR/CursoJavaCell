@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio8</title>
+  <style>
+    .contorno{
+      border:solid 2px #323232;
+      margin:70px 70px;
+      padding: 20px;;
+    }
+    .form_title{
+      margin-top: -32px;
+      display: block;
+      background-color: hsl(0, 0%, 100%);
+      max-width: 300px;
+      padding:10px;
+      border-bottom:1px solid grey;
+      border-right:1px solid grey;
+      margin-bottom: 29px;
+    }
+    footer{
+      margin-top:40px;
+      background:rgb(39, 38, 38);
+      color:white;
+      padding:30px;
+    }
+  </style>
+</head>
+<body>
+  <section id="formulario">
+    <form action="">
+      <section class="contorno">
+        <span class="form_title">Datos personales</span>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre">
+        <br>
+        <label for="edad">Edad:</label>
+      <input type="number" name="edad" id="edad">
+      </section>
+      <section class="contorno">
+        <span class="form_title">Cultura general</span>
+        <span>Capital de Noruega:</span>
+        <input type="radio" id="capital1" name="capital1" value="Copenhague">
+        <label for="capital1">Copenhague</label>
+        <input type="radio" id="capital2" name="capital2" value="Helsinki">
+        <label for="capital2">Helsinki</label>
+        <input type="radio" id="capital3" name="capital3" value="Oslo">
+        <label for="capital3">Oslo</label><br>
+        <span>Fecha de la Revolucion Francesa:</span>
+        <input type="radio" id="1942" name="1942" value="1942">
+        <label for="1942">1942</label>
+        <input type="radio" id="1789" name="1789" value="1789">
+        <label for="1789">1789</label>
+        <input type="radio" id="1917" name="1917" value="1917">
+        <label for="1917">1917</label><br>
+        <input type="reset" value="Limpiar">
+        <input type="submit" value="Enviar">
+      </section>
+    </form>
+  </section>
+  <section>
+    <h1>HTML5 number Input</h1>
+    <form action="">
+      <h2>Ejemplo1</h2>
+      <span>Introduce tu edad:</span>
+      <input type="number">
+      <input type="submit" value="Enviar">
+      <h2>Ejemplo2</h2>
+      <span>Introduce tu edad(min=18 max =99 , campo obligatorio</span>
+      <input type="text"  inputmode="numeric" required >
+      <input type="submit" value="Enviar">
+      <h2>Ejemplo3</h2>
+      <span>Introduce tu edad(min=18 max =99 , campo obligatorio</span>
+      <input type="number" required min="18" max="99">
+      <input type="submit" value="Enviar">
+
+    </form>
+  </section>
+  <section style="margin-top:80px;">
+    <dialog open> Los sigientes párrados cambian de color con eventos</dialog>
+    <p onclick="this.style.color='red'">Este parrafo cambia con click...</p>
+    <p ondblclick="this.style.color='red'">Este parrafo cambia con doble click...</p>
+    <p onmouseup="this.style.color='red'">Este parrafo cambia al liberar el mousse...</p>
+    <p onmousedown="this.style.color='red'">Este parrafo cambia al presionar el mousse...</p>
+    <p onmousemove="this.style.color='red'">Este parrafo cambia al mover el mousse...</p>
+    <p onmouseover="this.style.color='red'">Este parrafo cambia al pasar el mousse sobre él...</p>
+    <p onmouseout="this.style.color='red'">Este parrafo cambia al quitar el mousse de encima ...</p>
+  </section>
+  <footer>
+    contacto
+  </footer>
+  
+</body>
+</html>

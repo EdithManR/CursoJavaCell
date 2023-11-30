@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio9</title>
+  <style>
+    table{
+      border:1px solid black;
+      border-collapse: collapse;
+    }
+    tbody, th{
+      border-collapse: collapse;
+    }
+    td{
+      margin:0px;
+      border:1px solid grey;
+      border-collapse: collapse;
+      padding:10px;
+    }
+    .bold{
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!--Tabla-->
+  <table id="reporte-anual"style="border:solid;" 
+    data-name-table="Análisis de ventas anuales" 
+    data-num-anios="4" 
+    data-nom-products='"ProductoA","ProductoB","ProductoC", "ProductoD"' 
+    data-num-products="4">
+    
+    <caption class="bold">Análisis de ventas anuales</caption>
+    <tbody>
+      <tr class="bold">
+        <td rowspan="2">AÑO</td>
+        <td colspan="4">Expansión de ventas</td>
+      </tr>
+      <tr class="bold">
+        <td>Producto A</td>
+        <td>Producto B</td>
+        <td>Producto C</td>
+        <td>Producto D</td>
+      </tr>
+      <tr>
+        <td class="bold">N-3</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td class="bold">N-2</td>
+        <td>3</td>
+        <td>5</td>
+        <td>8</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td class="bold">N-1</td>
+        <td>4</td>
+        <td>4</td>
+        <td>7</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td class="bold">N</td>
+        <td>5</td>
+        <td>7</td>
+        <td>6</td>
+        <td>2</td>
+      </tr>
+      <tr class="bold">
+        <td rowspan="2" >AÑO</td>
+        <td>ProductoA</td>
+        <td>ProductoB</td>
+        <td>ProductoC</td>
+        <td>ProductoD</td>
+      </tr>
+      <tr>
+        <td colspan="4" class="bold">Expansión de ventas</td>
+      </tr>
+    </tbody>
+  </table>
+  <script>
+    var tabla=document.querySelector('#reporte-anual');
+    var tablaData=tabla.dataset;
+    console.log('Título de la tabla: "' + tablaData.nameTable + '"');
+    console.log("Nombre de los productos: " + tablaData.nomProducts);
+    console.log("Número de Años reportados: " + tablaData.numAnios);
+    console.log("Número de productos reportados" + tablaData.numProducts);
+  </script>
+</body>
+</html>
+
