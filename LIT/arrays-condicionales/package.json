@@ -1,0 +1,19 @@
+{
+  "name": "arrays-condicionales",
+  "version": "0.0.1",
+  "description": "Ejemplo de uso de arrays y condicionales",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "web-dev-server wds --node-resolve --whatch --open"
+  },
+  "author": "Edith Mandujano Rios",
+  "license": "ISC",
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.8.0",
+    "lit-element": "^4.0.2"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.4.1"
+  }
+}
