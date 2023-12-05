@@ -21,8 +21,6 @@ export class TempleteBind extends LitElement {
 
   constructor() {
     super();
-    this.header = 'Hey there';
-    this.counter = 5;
     this.prop1='text binding';
     this.prop2 ='mydiv';
     this.prop3 = true;
@@ -36,9 +34,6 @@ export class TempleteBind extends LitElement {
 
   render() {
     return html`
-      <!-- <h2>${this.header} Nr. ${this.counter}!</h2>
-      <button @click=${this.__increment}>increment</button> -->
-      <!--Text binding -->
       <div>${this.prop1}</div>
 
       <!--atributo binding -->
