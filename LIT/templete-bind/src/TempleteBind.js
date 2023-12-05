@@ -34,8 +34,8 @@ export class TempleteBind extends LitElement {
 
   render() {
     return html`
-      <h2>${this.header} Nr. ${this.counter}!</h2>
-      <button @click=${this.__increment}>increment</button>
+      <!-- <h2>${this.header} Nr. ${this.counter}!</h2>
+      <button @click=${this.__increment}>increment</button> -->
       <!--Text binding -->
       <div>${this.prop1}</div>
 
