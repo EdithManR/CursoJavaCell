@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+    li{
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    import { html, render } from 'lit';
+    import '../e-concat.js';
+
+    const title = 'Registros:';
+    render(
+      html`
+      <h2> ${title}</h2>
+      <li>
+        <e-concat email="hdzroberto@gmail.com" nombre="Roberto Hernández">
+        </e-concat>
+      </li>
+
+      <li>
+        <e-concat email="lucymtz@gmail.com" nombre="Lucía Martinez " vermas> 
+        </e-concat>
+      </li>
+
+      <li>
+        <e-concat email="rdgzesteban@gmail.com" nombre="Esteban Rodríguez">
+        </e-concat>
+      </li>
+
+        
+      `,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+</html>
