@@ -14,7 +14,8 @@ export class TempleteBind extends LitElement {
      prop1: {type: String},
      prop2: {type: String},
      prop3: {type: Boolean},
-     prop4: {type:String}
+     prop4: {type:String},
+     activo: {type:Boolean}
    };
  }
 
@@ -26,6 +27,7 @@ export class TempleteBind extends LitElement {
     this.prop2 ='mydiv';
     this.prop3 = true;
     this.prop4 ='pie';
+    this.activo =true;
   }
 
   __increment() {
@@ -58,9 +60,17 @@ export class TempleteBind extends LitElement {
       <div> event handler binding
         <button @click="${this.clickHandler}"> click </button>
       </div>
+
+      <p> <input type="checkbox"
+      ?checked="${this.activo}" @change="${this.doChange}"> 
+      </p>
     `;
   }
   clickHandler(e){
     console.log(e.target);
+  }
+  doChange(e){
+    this.activo= e.target.checked;
+    console.log(this.activo);
   }
 }
