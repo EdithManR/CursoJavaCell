@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/input-sample.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "InputSample",
+          "members": [
+            {
+              "kind": "field",
+              "name": "header",
+              "type": {
+                "text": "string"
+              },
+              "default": "'My app'",
+              "privacy": "public",
+              "attribute": "header"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "header",
+              "fieldName": "header"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "input-sample",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "input-sample",
+          "declaration": {
+            "name": "InputSample",
+            "module": "src/input-sample.js"
+          }
+        }
+      ]
+    }
+  ]
+}
