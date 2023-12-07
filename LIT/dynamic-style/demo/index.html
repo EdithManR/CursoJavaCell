@@ -15,10 +15,11 @@
     import { html, render } from 'lit';
     import '../dynamic-style.js';
 
-    const header = 'Hello owc World!';
+    const header = 'Estilos dinámicos';
     render(
       html`
-        <dynamic-style .header=${header}>
+      <h1>${header}</h1>
+        <dynamic-style>
           some light-dom
         </dynamic-style>
       `,

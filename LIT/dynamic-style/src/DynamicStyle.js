@@ -1,7 +1,7 @@
 import { html, css, LitElement } from 'lit';
 
-import { classMap } from '../node_modules/lit-html/directives/class-map';
-import { styleMap } from '../node_modules/lit-html/directives/style-map';
+import { classMap } from '../node_modules/lit/directives/class-map';
+import { styleMap } from '../node_modules/lit/directives/style-map';
 
 export class DynamicStyle extends LitElement {
   static get properties() {
@@ -29,9 +29,9 @@ export class DynamicStyle extends LitElement {
 
   render() {
     return html`
-      <div class=${classMap(this.classes)} style= ${styleMap(this.styles)}>
+      <div class=${classMap(this.classes)} style =${styleMap(this.styles)}>
       
-       Some Content
+       Contenido
       </div>
     `;
   }
