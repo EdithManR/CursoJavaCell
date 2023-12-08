@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    import { html, render } from 'lit';
+    import '../src/CustomHasChanged.js';
+
+    const header = 'Hello owc World!';
+    render(
+      html`
+      <h3> HasChanged Personalizado</h3>
+        <custom-has-changed .header=${header}>
+          some light-dom
+        </custom-has-changed>
+      `,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+</html>
