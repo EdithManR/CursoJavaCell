@@ -24,7 +24,7 @@ body {
   cursor: pointer;
 }
 .boton:hover{
-  background-color: #146092;
+  background-color: #146092<;
 }
 
 .formulario {
