@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slot component</title>
+  <style>
+    my-element{
+      --primary-color:blue;
+      --heading-primary: 40px;
+    }
+    .segundo{
+      --primary-color: red;
+    }
+    .tercero{
+      --second-color: lime;
+    }
+  </style>
+</head>
+<body>
+  <h2>Soy un título</h2>
+  <my-element>
+    <span slot="title">Soy el título del componente</span>
+    <span slot="parrafo">Soy el parrafo dentro del componente</span>
+  </my-element>
+  <my-element class="segundo">
+    <span slot="title">Soy el título del componente</span>
+    <span slot="parrafo">Soy el parrafo dentro del componente</span>
+  </my-element>
+  <my-element class="tercero">
+    <span slot="title">Soy el título del componente</span>
+    <span slot="parrafo">Soy el parrafo dentro del componente</span>
+  </my-element>
+  <script type="module" src="./js/mi-elemento.js"></script>
+</body>
+</html>
