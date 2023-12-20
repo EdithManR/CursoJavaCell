@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seguimiento de variables</title>
+</head>
+<body>
+
+  <script language="javascript">
+    {
+    var contador;  
+    contador=1;
+    
+    while (contador<7)
+      {
+      let dato=prompt('Introduce número del 1 al 10:','');  
+      let num=parseInt(dato);
+
+      document.write(` El numero introducido es ${num} </br> `);  
+      contador = contador +1 ;
+      }
+      document.write( ` </br>
+      <h2>Fin del programa contador ya es 7</h2>
+      `);
+      document.write (`</br> Ultimo numero introducido es ${num}`)
+    }
+    </script>
+  
+</body>
+</html>
+
+
+
+
