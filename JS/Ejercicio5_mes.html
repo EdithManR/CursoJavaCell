@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Días del mes</title>
+    <script>
+    let mes, numDias;
+    let feb = 28;
+    let imp = 31;
+    let par =30;
+
+    mes = prompt("Ingrese un numero del mes, del 1 al 12?", "0");
+    mes = parseInt(mes);
+
+    if (isNaN(mes)) {
+       document.write( "Error. Ingrese un número del 1 al 12");
+    } 
+    else {
+      
+      if (mes===2){
+        document.write(`El mes tiene: ${feb} días`);
+      }
+      if ((mes/2)===0){
+        document.write(`El mes tiene: ${par} días`);
+      }/*
+      else{
+        document.write(`El mes tiene: ${impar} días`);
+      }*/
+      
+    }
+
+
+    </script>
+  </head>
+  <body>
+    
+  </body>
+</html>
