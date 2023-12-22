@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calculo de altura</title>
+
+  <script>
+/*Se calcula la altura final tomando en cuenta un máximo de edad de crecimiento los 18 años y un 
+crecimiento promedio de 8cm por año*/
+    function calcular(){
+      var edad = parseFloat(document.fAltura.edad.value); 
+      var altura= parseFloat(document.fAltura.altura.value);  
+      var altContainer = document.getElementById('alturaFinal');
+      var edadMax = 18; 
+      var crecimientoAnual = 8;
+      var aniosFaltantes = edadMax - edad;
+      var crecimiento = aniosFaltantes * crecimientoAnual;
+      var alturaFinal = altura + crecimiento;
+
+      altContainer.innerText = alturaFinal+ "cm";
+
+    }
+  </script>
+
+</head>
+<body>
+  <form name="fAltura">
+    <h2>Ingresa la edad y altura del niño para conocer la altura que tendrá de adulto</h2>
+    
+    Ingrese la Edad:  <input type="text" name="edad"/> 
+    ingrese Altura en cm:  <input type="text" name="altura"/> 
+    <p>Su altura aproximada en la vida adulta será: <span id="alturaFinal"> </span></p>
+    <input type="button" value="Calcula" onclick="calcular()" />
+    <p style="font-size: 0.8em;">*Nota: Se calcula la altura final tomando en cuenta un máximo de edad de crecimiento los 18 años 
+      y un crecimiento promedio de 8cm por año</p>
+  </form>
+</body>
+</html>
