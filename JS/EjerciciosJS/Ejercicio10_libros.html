@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Libro:JSON</title>
+  <script>
+     var contenido =document.getElementById("salidaDatos");
+        
+    var libros = [
+          {
+          "id" : "978-0641723445",
+          "cat" : ["book","hardcover"],  "name" : "The Lightning Thief",  "author" : "Rick Riordan",
+          "series_t" : "Percy Jackson and the Olympians",  "genre_s" : "fantasy",
+          "inStock" : true,
+          "price" : 12,
+          "pages_i" : 384
+          }
+          ,
+          {
+          "id" : "978-1857995879",
+          "cat" : ["book","paperback"],
+          "name" : "Sophie's World : The Greek Philosophers",  "author" : "Jostein Gaarder",
+          "genre_s" : "fantasy",
+          "inStock" : true,  "price" : 3,
+          "pages_i" : 64
+          }
+          ,
+          {
+          "id" : "978-1933988177",
+          "cat" : ["book","paperback"],
+          "name" : "Lucene in Action, Second Edition",  "author" : "Michael McCandless",
+          "genre_s" : "IT",
+          "inStock" : true,  "price" : 30,
+          "pages_i" : 475
+          }
+        ]
+        //Se agregan 2 items al arreglo lbros
+        libros.push({
+          "id" : "978-0641723564",
+          "cat" : ["book","hardcover"],  "name" : "The Thief",  "author" : "Rick Riordan",
+          "series_t" : "Percy Jackson and the Olympians",  "genre_s" : "fantasy",
+          "inStock" : true,
+          "price" : 34,
+          "pages_i" : 367
+        }, 
+        {
+          "id" : "978-0641723487",
+          "cat" : ["book","hardcover"],  "name" : "Twisted-Wonderland",  "author" : "Yana Toboso",
+          "series_t" : "The Manga: Book of Heartslabyul",  "genre_s" : "fantasy",
+          "inStock" : true,
+          "price" : 15,
+          "pages_i" : 240
+        }
+      )
+        
+      //se agrega funcion para mostrar todos los libros del catálogo
+        function printBook(libros, index){         
+          var libro = `<p> Nombre:${libros.name} <br> Autor: ${libros.author} <br> Precio: ${libros.price}</p>`;
+          document.write(libro); 
+         
+
+        }
+        function mostrar(){
+          libros.forEach((libros, indice) => printBook(libros, indice));
+        }
+        //se agrega funcion para mostrar los libros que cuestan mas de 20
+        function mostrarCaros(caros, index){
+         
+          caros.forEach((caro,index) => {
+            var libro = `<p>Nombre: ${caro.name} <br>Autor: ${caro.author}<br> Precio: ${caro.price}</p>`;
+            
+            document.write(libro);
+          })
+        }
+
+        function buscarCaros(){
+          let arrayCaros =[];
+          for( let i = 0; i < libros.length; i++) {
+            if (libros[i].price >20) arrayCaros.push(libros[i]);
+          }
+          return mostrarCaros(arrayCaros);
+        }
+
+
+
+  </script>
+</head>
+<body>
+    <div>
+      <input type="button" value="Mostrar libros" onclick="mostrar()" />
+      <input type="button" value="Mostrar libros con precio mayor a 20" onclick="buscarCaros()" />
+    </div>
+  
+</body>
+</html>
