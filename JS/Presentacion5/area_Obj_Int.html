@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Modules - Object Interface</title>
+
+    <script>
+      var rectangulo = (function () {
+        // Variable privada interna  
+        var numero=0;
+
+        return {
+          perimetro: function(altura, base) {
+            var calculoperimetro = (altura+base)*2;  
+            return  calculoperimetro;
+          },
+          area: function(altura,base) {  
+            var calculoarea = altura*base;  numero++;
+            return calculoarea;
+          },
+          numeroveces: function() {  
+            return numero;
+          }
+        } // fin return
+      })(); //fin function  
+
+      function programa() {
+        var num1 = parseFloat(document.fdatos.entradaA.value);  
+        var num2 = parseFloat(document.fdatos.entradaB.value);
+        
+        document.writeln("El area es "+ rectangulo.area(num1,num2) + "<br>");  
+        document.writeln("El perimetro es "+ rectangulo.perimetro(num1,num2) + "<br>");  
+        document.writeln("número veces "+ rectangulo.numeroveces());
+      }
+    </script>
+  </head>
+
+  <body>
+    <h2>Calculo Area y perimetro rectangulo</h2>
+    <form name="fdatos">
+    Escribe Base: <input type="text" name="entradaA"/>  Escribe Altura: <input type="text" name="entradaB"/>
+    <input type="button" value="Calcula" onclick="programa()" />
+    </form>
+  </body>
+</html>

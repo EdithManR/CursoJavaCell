@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cálculo de área, perímetro de cuadrado, rectangulo y triangulo</title>
+  <script>
+    var triangulo = (function () {
+        return {
+          perimetro: function(lado1, lado2, lado3) {
+            var calculoperimetro = lado1 + lado2 + lado3;  
+            return  calculoperimetro;
+          },
+          area: function(base,altura) {  
+            var calculoarea = (altura*base) / 2;  
+            return calculoarea;
+          },
+          
+        } // fin return
+      })();
+      function programaTriangulo() {
+        var base = parseFloat(document.fdatos.baseT.value);  
+        var altura = parseFloat(document.fdatos.alturaT.value);
+        var lado1 = parseFloat(document.fdatos.lado1.value);
+        var lado2= parseFloat(document.fdatos.lado2.value);
+        var lado3 = parseFloat(document.fdatos.lado3.value);
+        var resultAT = document.getElementById('areaTriangulo');
+        var resultBT = document.getElementById('perTriangulo');
+
+        resultAT.innerText = triangulo.area(base,altura);
+        resultBT.innerText = triangulo.perimetro(lado1,lado2,lado3);
+        
+      }
+
+      var rectangulo = (function(){
+        return{
+          perimetro: function(base, altura){
+            var calculoPerimetro = (base + altura) * 2;
+            return calculoPerimetro;
+          },
+          area: function(base,altura){
+            var calculoArea = base*altura;
+            return calculoArea;
+          }
+        }
+      })();
+      function programaRectangulo(){
+        var base = parseFloat(document.fdatos.baseR.value);
+        var altura = parseFloat(document.fdatos.alturaR.value);
+
+        var resultAR = document.getElementById('areaRectangulo');
+        var resultBR = document.getElementById('perRectangulo');
+
+        resultAR.innerText = rectangulo.area(base,altura);
+        resultBR.innerText = rectangulo.perimetro(base,altura);
+        
+      }
+
+    var cuadrado= (function(lado){
+      return{
+        perimetro: function(lado){
+          var calculoPerimetro = lado*4;
+          return calculoPerimetro;
+          console.log( "el perimetro es:" + calculoPerimetro);
+          
+        },
+        area: function(lado){
+          var calculoArea = lado*lado;
+          return calculoArea;
+        }
+      }
+    })();
+    function programaCuadrado(){
+      var lado = parseFloat(document.fdatos.ladoC.value);
+      
+      var resultAC = document.getElementById('areaCuadrado');
+      var resultPC = document.getElementById('perCuadrado');
+      resultAC.innerText = cuadrado.area(lado);
+      resultPC.innerText = cuadrado.perimetro(lado);
+    }
+  </script>
+</head>
+<body>
+    <form name="fdatos">
+      <h2>Calculo Área y perímetro tiángulo</h2>
+      Escribe Base: 
+      <input type="text" name="baseT"/>  
+      Escribe Altura: 
+      <input type="text" name="alturaT"/></br>
+      Escribe el tamaño de cada lado:<br>
+      Lado1
+      <input type="text" name="lado1"/>
+      Lado2
+      <input type="text" name="lado2"/>
+      Lado3
+      <input type="text" name="lado3"/>
+
+      <p>Àrea del triángulo: <span id="areaTriangulo"></span></p>
+      <p>Perímetro del triángulo: <span id="perTriangulo"></span></p>
+      <input type="button" value="Calcula" onclick="programaTriangulo()" /><br>
+      <hr>
+
+     
+      <h2>Calculo Área y perímetro rectángulo</h2>
+      Escribe Base: <input type="text" name="baseR"/>  
+      Escribe Altura: <input type="text" name="alturaR"/>
+      <p>Área del rectángulo: <span id="areaRectangulo"></span></p>
+      <p>Perímetro del rectángulo: <span id="perRectangulo"></span></p>
+      <input type="button" value="Calcula" onclick="programaRectangulo()" /></br>
+
+      <hr>
+
+      <h2>Calculo Área y perímetro Cuadrado</h2>
+      Escribe lado: <input type="text" name="ladoC"/>  
+      <p>Área del cuadrado: <span id="areaCuadrado"></span></p>
+      <p>Perímetro del cuadrado: <span id="perCuadrado"></span></p>
+      <input type="button" value="Calcula" onclick="programaCuadrado()" /></br>
+    </form>
+</body>
+</html>

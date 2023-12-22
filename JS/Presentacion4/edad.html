@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Verificar Edad</title>
+    <script>
+    let edad, final;
+
+    edad = prompt("Ingrese su edad?", "0");
+
+    if (isNaN(edad)) {
+      final = "Error. No es un número";
+    } 
+    else {
+      final = (edad < 18) ? "Demasiado joven" : "Mayor de edad";
+    }
+
+    document.write(final);
+    </script>
+  </head>
+  <body>
+    
+  </body>
+</html>
