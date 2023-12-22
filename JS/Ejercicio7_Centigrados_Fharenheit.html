@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grados celcius a fharenheit </title>
+
+  <script>
+    function convertir(){
+
+      let celcius, res;
+      
+      celcius = parseInt(document.grados.cel.value);  
+      console.log(celcius);
+      res = (celcius*1.8)+32;
+      document.grados.resultado.value = res + "ºF";
+    }   
+    function consultarTemp(){
+      let far, temp;
+      let tempContainer= document.getElementById('temperatura');
+      tempContainer.innerText = " ";
+      far = parseInt(document.grados.far.value);  
+      if(far>=14 && far<=32) {temp='Temperatura baja';}
+      if(far>= 32 && far <=68){temp='Temperatura adecuada';}
+      if(far>= 68 && far <= 96){temp='Temperatura alta';}
+      if(far<14 || far > 96){temp='Temperatura desconocida';}
+      tempContainer.innerText= temp;
+    }
+    function convertirFar(){
+      let far, res;
+      far= parseInt(document.grados.far.value);
+      res = (far-32) / 1.8;
+      document.grados.resFar.value = res + "ºC";
+      
+    }
+  </script>
+
+</head>
+<body>
+  <form name="grados">
+    <h2>Ingresa grados celcius para convertirlos en Fahrenheit</h2>
+    Ingresa los grados Celcius: <input type="text" name="cel"> ºC</br>  </br>     
+    Resultado: <input type="text" name="resultado"> </br></br> 
+    <input type="button" name="button1" value="convertir" onclick="convertir()"></br>
+    <hr>
+    <h2>Ingresa grados celcius para consultar cómo esta la temperatura o convertirlos en Fahrenheit</h2>
+    Ingresa los grados Fahrenheit: <input type="text" name="far"> ºF</br>  </br>     
+    <p id="temperatura"></p> </br>Resultado:<input type="text" name="resFar"> </br></br> 
+    <input type="button" name="button1" value="Consultar temperatura" onclick="consultarTemp()">
+    <input type="button" name="button2" value="Convertir a Celcius" onclick="convertirFar()"></br>
+
+  </form>
+</body>
+</html>
