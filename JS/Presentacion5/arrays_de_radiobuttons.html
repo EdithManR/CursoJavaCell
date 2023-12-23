@@ -1,0 +1,39 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <script>
+    function GetData(radioName){
+      var radi = document.getElementsByName(radioName);  
+      for (var i = 0; i < radi.length; i++){
+        if (radi[i].checked) return radi[i].value;
+      }
+    }
+    function Discount(){
+      var desc = 0, preu = 100, rest;  let curs = GetData('curs');
+      let menj = GetData('menjador');  let germ = GetData('germans');  
+      if (curs == 'FP'){
+        if (germ == 'true') desc = 0.1;  else if (menj == 'true') desc = 0.05;
+      }
+      else {
+        if (menj == 'true') desc = 0.08;  else desc = 0.06;
+      }
+        rest = preu * desc;  preu = preu - rest;
+        alert("El preu final és " + preu);
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <h4>Curso</h4>
+    <input type="radio" name="curs" value="FP">FP<br>
+    <input type="radio" name="curs" value="BATX">BATX<br>
+    <h4>Menjador</h4>
+    <input type="radio" name="menjador" value="true">Sí<br>
+    <input type="radio" name="menjador" value="false">No<br>
+    <h4>Germans</h4>
+    <input type="radio" name="germans" value="true">Sí<br>
+    <input type="radio" name="germans" value="false">No<br>
+    <input type="button"  value="calcular" onclick="Discount()">
+  </form>
+</body>
+</html>
