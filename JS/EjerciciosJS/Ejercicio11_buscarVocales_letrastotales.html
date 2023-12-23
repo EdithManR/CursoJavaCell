@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador de vocales</title>
+</head>
+<body>
+  <form action="" name="formEntrada">
+    <h2>Ingrese un texto y descubra cuantas vocales tiene</h2>
+    Texto: <input type="text" name="entradaText"/>
+    <input type="button" value="Verificar" onclick="programa(entradaText.value)" />
+    <p id="result"></p>
+    <p id="letras"></p>
+  </form>
+
+
+  <script>
+    let cantidadVocales = 0;
+    const myElement = document.getElementById("result");
+    const myElement2 = document.getElementById("letras");
+    
+    function letrasTotales(entradaText){
+      let espacios= entradaText.split(" ").length;
+      let total =entradaText.length - espacios;
+      myElement2.innerHTML =`El texto - ${entradaText} - contiene ${total +1} letras`;
+    }
+    function programa(entradaText){
+      let mensaje = entradaText.toLowerCase();
+      mensaje.split("").forEach((x)=>{
+         if(x == "a" || x == "e" || x == "i" || x == "o" || x == "u")
+         cantidadVocales ++;
+      });
+      myElement.innerHTML =`El texto - ${entradaText} - contiene ${cantidadVocales} vocales`;
+      return letrasTotales(entradaText);
+    }
+
+
+  </script>
+</body>
+</html>
+
